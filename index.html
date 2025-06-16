@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Dictionary</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Manifest for PWA -->
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Theme color for Android toolbar -->
+  <meta name="theme-color" content="#3f51b5" />
+
+  <!-- Icon for iOS (optional) -->
+  <link rel="apple-touch-icon" href="icon-192.png" />
+</head>
+<body>
+  <div class="container">
+    <h1>AI Dictionary</h1>
+    <input type="text" id="wordInput" placeholder="Enter a word" />
+    <button onclick="searchWord()">Search</button>
+
+    <div id="results">
+      <h2 id="wordTitle"></h2>
+      <button id="playAudio" onclick="playAudio()">🔊</button>
+      <p><strong>Part of Speech:</strong> <span id="partOfSpeech"></span></p>
+      <p><strong>Definition:</strong> <span id="definition"></span></p>
+      <p><strong>Verb Forms:</strong> <span id="verbForms"></span></p>
+      <p><strong>Synonyms:</strong> <span id="synonyms"></span></p>
+      <p><strong>Antonyms:</strong> <span id="antonyms"></span></p>
+
+      <div class="translation">
+        <label for="targetLang">Translate to:</label>
+        <select id="targetLang">
+          <option value="hi">Hindi</option>
+          <option value="te">Telugu</option>
+          <option value="fr">French</option>
+        </select>
+        <button onclick="translateDefinition()">Translate</button>
+        <p id="translatedDef"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
